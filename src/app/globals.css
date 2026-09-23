@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+:root {
+  --bg: #0D1117;
+  --surf: #161B22;
+  --surf2: #21262D;
+  --border: #30363D;
+  --border2: #484F58;
+  --text: #C9D1D9;
+  --muted: #8B949E;
+  --faint: #3D4450;
+  --accent: #F0883E;
+  --blue: #58A6FF;
+  --green: #3FB950;
+  --red: #F85149;
+  --yellow: #E3B341;
+  --purple: #BC8CFF;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  height: 100%;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 99px; }
+
+/* Badge chips */
+.badge { padding: .17rem .5rem; border-radius: 3px; font-family: 'JetBrains Mono', monospace; font-size: .67rem; font-weight: 600; border: 1px solid; }
+.bt { color: var(--yellow); border-color: rgba(227,179,65,.3); background: rgba(227,179,65,.08); }
+.bw { color: var(--red); border-color: rgba(248,81,73,.3); background: rgba(248,81,73,.08); }
+.bs { color: var(--green); border-color: rgba(63,185,80,.3); background: rgba(63,185,80,.08); }
+
+/* Syntax highlight */
+.ck { color: var(--purple); }
+.cf { color: var(--blue); }
+.cs { color: var(--green); }
+.cn { color: var(--yellow); }
+.cc { color: var(--muted); font-style: italic; }
+
+/* Viz bars */
+.bar { flex: 1; border-radius: 2px 2px 0 0; transition: height .07s, background .07s; background: var(--border2); }
+.bar.cmp { background: var(--yellow); }
+.bar.swp { background: var(--red); }
+.bar.srt { background: var(--green); }
+.bar.pvt { background: var(--purple); }
+
+/* BS boxes */
+.bsout { opacity: .22; }
+.bsact { border-color: var(--blue) !important; color: var(--text) !important; background: rgba(88,166,255,.1) !important; }
+.bsmid { border-color: var(--accent) !important; color: var(--accent) !important; background: rgba(240,136,62,.12) !important; }
+.bsfnd { border-color: var(--green) !important; color: var(--green) !important; background: rgba(63,185,80,.12) !important; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+.fadeIn { animation: fadeIn .2s ease; }
